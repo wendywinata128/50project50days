@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+  margin: 15px;
+  background-color: royalblue;
+  border-radius: 10px;
+  transform: translateX(-500%);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in;
+}
+
+.card:nth-of-type(even) {
+  transform: translateX(500%);
+}
+
+.card.active {
+  transform: translateX(0);
+}

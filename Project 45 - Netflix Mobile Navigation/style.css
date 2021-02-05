@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Muli", sans-serif;
+  overflow: hidden;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 0 10px 0;
+}
+
+button {
+  font-size: 32px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button#open {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+
+button#close {
+  position: absolute;
+  right: 30px;
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav.black {
+  background-color: black;
+  width: 60%;
+  max-width: 420px;
+  min-width: 320px;
+  transition-delay: 0.4s;
+}
+
+.nav.black.visible {
+  transition-delay: 0s;
+}
+
+.nav.red {
+  background-color: red;
+  width: 95%;
+  transition-delay: 0.2s;
+}
+
+.nav.white {
+  background-color: white;
+  width: 95%;
+  padding: 35px;
+  font-size: 16px;
+  transition-delay: 0s;
+}
+
+.nav.white.visible {
+  transition-delay: 0.4s;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  margin: 10px 0;
+}
+
+.nav ul ul {
+  margin-left: 15px;
+}

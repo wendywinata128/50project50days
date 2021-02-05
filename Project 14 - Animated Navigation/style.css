@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Muli" sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    lightblue 0%,
+    lightblue 50%,
+    rgb(54, 54, 248) 50%,
+    rgb(54, 54, 248) 100%
+  );
+}
+
+.container {
+  width: 80px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.7s linear;
+}
+
+.container.active {
+  width: 400px;
+}
+
+.container ul {
+  width: 0;
+  display: flex;
+  list-style: none;
+  transition: 0.7s linear;
+}
+
+.container.active ul {
+  width: 80%;
+}
+
+ul li {
+  flex-basis: 25%;
+  opacity: 0;
+  transform: rotate(0deg);
+  margin: 0px 10px;
+  font-weight: 500;
+  transition: transform 0.7s linear, opacity 0.7s linear;
+  cursor: pointer;
+}
+
+.container.active ul li {
+  opacity: 1;
+  transform: rotate(360deg);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.buttons {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.line {
+  height: 3px;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  background-color: royalblue;
+  transition: 0.7s linear;
+}
+
+.line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+.container.active .line1 {
+  transform: rotate(765deg) translateY(5px);
+}
+
+.container.active .line2 {
+  transform: rotate(-765deg) translateY(-5px);
+}

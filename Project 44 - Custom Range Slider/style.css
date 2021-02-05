@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(202, 226, 247);
+  font-family: "Lato";
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  position: relative;
+}
+
+.container input[type="range"] {
+  margin-top: 15px;
+  width: 240px;
+  -webkit-appearance: none;
+}
+
+.container input[type="range"]:focus {
+  outline: none;
+}
+
+/* Chrome & Safari */
+.container input[type="range"]::-webkit-slider-runnable-track {
+  background-color: rgb(128, 3, 128);
+  border-radius: 3px;
+  height: 10px;
+}
+
+.container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  border: 1px solid purple;
+}
+
+/* Firefox */
+.container input[type="range"]::-moz-range-track {
+  background-color: rgb(128, 3, 128);
+  border-radius: 3px;
+  height: 10px;
+}
+
+.container input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  border: 1px solid purple;
+}
+
+/* Internet Explorer */
+
+.container input[type="range"]::-ms-track {
+  background-color: rgb(128, 3, 128);
+  border-radius: 3px;
+  height: 10px;
+}
+
+.container input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  border: 1px solid purple;
+}
+
+.container label {
+  position: absolute;
+  top: -30px;
+  left: 85px;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}

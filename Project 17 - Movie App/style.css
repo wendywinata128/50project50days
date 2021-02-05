@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: rgb(4, 6, 102);
+  --secondary-color: rgb(37, 38, 102);
+  --third-color: rgb(52, 53, 92);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr 50px;
+  background-color: var(--secondary-color);
+  align-items: center;
+  height: 70px;
+}
+
+header h2 {
+  grid-column: 2/3;
+}
+
+header form {
+  justify-self: end;
+}
+
+header input {
+  padding: 15px 10px;
+  border-radius: 30px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  border: solid var(--primary-color);
+  color: white;
+}
+
+header input:focus {
+  background-color: var(--third-color);
+  outline: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.movie {
+  width: 300px;
+  height: auto;
+  margin: 10px 20px;
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-desc {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.movie-desc span {
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.movie-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--third-color);
+  padding: 15px;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .movie-info {
+  transform: translateY(0);
+}
+
+.green {
+  color: lightgreen;
+}
+.red {
+  color: red;
+}

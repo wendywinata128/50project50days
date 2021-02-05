@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Muli", sans-serif;
+  overflow: hidden;
+  background-color: rgb(15, 7, 133);
+}
+
+.container {
+  max-width: 100%;
+  width: 350px;
+  background-color: rgba(23, 21, 53, 0.9);
+  border-radius: 10px;
+  padding: 35px;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  height: 40px;
+  padding: 0 0 0 15px;
+  background-color: rgb(7, 7, 7);
+}
+
+.password {
+  word-break: break-all;
+}
+
+.fa-clipboard {
+  padding: 12px 0 10px 15px;
+  height: 100%;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(28, 28, 117);
+  cursor: pointer;
+}
+
+.fa-clipboard:active {
+  background-color: rgb(9, 9, 88);
+}
+
+.delete-all-saved {
+  font-size: 24px !important;
+  margin: 0 8px 8px auto !important;
+  display: block !important;
+  width: fit-content;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px 0;
+}
+
+.input-group input {
+  height: 40px;
+  width: 25px;
+  cursor: pointer !important;
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-group input:nth-of-type(1) {
+  height: 25px;
+  width: 50px;
+  padding: 3px;
+  cursor: text;
+}
+
+.generate-password {
+  width: 100%;
+  padding: 9px 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(49, 41, 168);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.generate-password:focus {
+  outline: none;
+}
+
+.generate-password:active {
+  transform: scale(0.95);
+}
+
+.button-group {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.button-group i {
+  font-size: 3rem;
+}
+
+.button-group div {
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  right: 120%;
+  top: 0;
+  width: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in;
+}
+
+.button-group.active div {
+  width: 300px;
+  padding: 20px 15px;
+  opacity: 1;
+}
+
+.button-group div::before {
+  content: "";
+  position: absolute;
+  border: 20px solid;
+  border-color: transparent transparent transparent whitesmoke;
+  top: 0;
+  left: 100%;
+}
+
+.button-group div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-group span i {
+  background-color: transparent;
+  font-size: 18px;
+}

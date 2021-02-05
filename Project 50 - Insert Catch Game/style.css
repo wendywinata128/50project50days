@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Press Start 2P", sans-serif;
+  background-color: rgb(78, 131, 231);
+  overflow: hidden;
+  color: white;
+  transition: all 0.7s ease-in;
+}
+
+button:focus {
+  outline: none;
+}
+
+.page-1 {
+  flex-shrink: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.page-1 #btn-play-game {
+  margin: 35px 0;
+  padding: 18px 35px;
+  border-radius: 3px;
+  font-size: 18px;
+  border: 0;
+  font-family: inherit;
+  background-color: white;
+  color: rgb(78, 131, 231);
+  cursor: pointer;
+}
+
+.page-2 {
+  flex-shrink: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-2 .insects {
+  display: flex;
+  margin: 30px 0;
+}
+
+.page-2 .insect {
+  border: 3px solid white;
+  text-align: center;
+  width: 190px;
+  height: 190px;
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+
+.page-2 .insect:hover {
+  background-color: white;
+  color: rgb(78, 131, 231);
+}
+
+.page-2 .insect h4 {
+  margin: 10px 0;
+}
+
+.page-2 img {
+  width: 120px;
+  height: 100px;
+  margin: 10px 0;
+}
+
+.page-3 {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-3 .info {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-size: 24px;
+}
+
+.page-3 .game {
+  flex: 1;
+  position: relative;
+}
+
+.page-3 .target {
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  cursor: pointer;
+}

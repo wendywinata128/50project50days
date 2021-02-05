@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: aliceblue;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #476ce4;
+  color: rgb(255, 255, 255);
+  padding: 50px 80px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 5px;
+  background-color: white;
+  margin: 0 0 15px 0;
+  animation: anim-loading-bar 10s linear infinite;
+}
+
+@keyframes anim-loading-bar {
+  to {
+    width: 100%;
+  }
+}
+
+.quotes {
+  margin: 0 0 30px 0;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.fa-quote-left {
+  font-size: 26px;
+  position: absolute;
+  left: 30px;
+  top: 70px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.fa-quote-right {
+  font-size: 26px;
+  position: absolute;
+  right: 30px;
+  top: 65px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.author img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.author .info {
+  margin: 0 10px;
+}

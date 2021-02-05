@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.container {
+  width: 800px;
+  text-align: center;
+  background-color: rgb(47, 177, 134);
+  padding: 15px 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px #888888;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.container h2 {
+  margin: 20px 30px;
+  letter-spacing: 1px;
+}
+
+.container .jokes {
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+.container button {
+  margin: 20px 30px;
+  padding: 14px 40px;
+  border: 0;
+  background-color: teal;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400&display=swap");
+/* rgb(222, 253, 224) */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.card {
+  margin: 10px 15px;
+  background-color: rgb(222, 253, 224);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.img-container {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.card .img-container img {
+  max-width: 90%;
+  margin-top: 20px;
+}
+
+.card .id {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  display: block;
+  margin: 20px auto 10px auto;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 80%;
+}
+
+.card .name {
+  letter-spacing: 1.1px;
+  font-size: 120%;
+  margin: 0 0 5px;
+}
+
+.card .type {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  word-break: break-all;
+  font-size: 90%;
+  letter-spacing: 0.9px;
+}

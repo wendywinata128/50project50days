@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  background-color: black;
+  overflow: hidden;
+}
+
+.container {
+  background-color: white;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3);
+}
+
+header {
+  padding: 20px 25px;
+  background-color: rgb(175, 190, 211);
+}
+
+header .title {
+  font-weight: 300;
+  margin: 5px 0px;
+}
+
+header .subtitle {
+  margin: 5px 0 10px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+header #search {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(26, 25, 25);
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-height: 400px;
+  overflow: auto;
+  padding: 10px 20px;
+}
+
+.main .user {
+  display: flex;
+  margin: 10px 0;
+}
+
+.main .user.hidden {
+  display: none;
+}
+
+.main .user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: tomato;
+}
+
+.main .user .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.main .user .user-info h4 {
+  margin: 5px 0;
+}
+
+.main .user .user-info p {
+  margin: 5px 0;
+}
+
+.main li:last-of-type {
+  padding: 10px;
+  font-size: 150%;
+  letter-spacing: 1.1px;
+}
+
+.main li:last-of-type h4 {
+  font-weight: 400;
+}

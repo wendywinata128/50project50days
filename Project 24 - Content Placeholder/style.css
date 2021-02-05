@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.card-header {
+  height: 200px;
+}
+
+.card-header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 20px;
+  color: #333;
+}
+
+.card-info h3 {
+  margin: 10px 0;
+  color: black;
+}
+
+.card-author {
+  overflow: hidden;
+  padding: 15px;
+  display: flex;
+}
+
+.card-author img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-author .author-info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.author-info .name {
+  font-weight: bold;
+}
+.author-info .job {
+  color: #333;
+}
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: animateBg 1s linear infinite;
+}
+
+.animated-text {
+  border-radius: 50px;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}

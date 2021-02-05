@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+button#doMagic {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: rgb(187, 186, 105);
+  border: 0;
+  box-shadow: 0px 0px 2px rgb(187, 186, 105), 0px 0px 10px rgb(187, 186, 105);
+  border-radius: 5px;
+  position: fixed;
+  top: 30px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.boxes {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxes.big {
+  width: 600px;
+  height: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: 0.6s ease;
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 16px;
+  background-color: rgb(236, 236, 129);
+  top: 8px;
+  right: -16px;
+  transform: skewY(45deg);
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  left: 8px;
+  bottom: -16px;
+  background-color: rgb(221, 221, 86);
+  transform: skewX(45deg);
+}

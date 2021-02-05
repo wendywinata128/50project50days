@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #111;
+  --secondary-color: #fff;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+html {
+  transition: 0.5s ease-in;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.toggle {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border: 0;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.container {
+  display: flex;
+  height: 350px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.needle {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  height: 45px;
+  width: 3px;
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+  transition: 0.5s ease;
+}
+
+.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.minute {
+  transform: translate(-50%, -100%) rotate(30deg);
+  height: 80px;
+}
+
+.second {
+  height: 100px;
+  background-color: crimson;
+  transform: translate(-50%, -100%) rotate(90deg);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: crimson;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: var(--secondary-color);
+  height: 5px;
+  width: 5px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 48px;
+  text-align: center;
+}
+
+.date {
+  font-size: 26px;
+  text-align: center;
+}

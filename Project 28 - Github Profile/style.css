@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(33, 14, 49);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+#form {
+  max-width: 700px;
+  width: 100%;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#search {
+  display: block;
+  padding: 15px;
+  padding-right: 30px;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(83, 20, 83);
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+
+#search.active {
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  font-size: 24px;
+  background: rgb(83, 20, 83);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+
+#search.active + .search-icon {
+  right: 30px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+#search::placeholder {
+  color: rgb(153, 152, 152);
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  margin: 10px;
+  background-color: rgb(83, 20, 83);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.photo-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid rgb(33, 14, 49);
+  margin: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.user-info {
+  margin-left: 15px;
+}
+
+.user-info h4 {
+  margin: 15px 0;
+  font-size: 24px;
+  letter-spacing: 1.1px;
+}
+
+.user-info p {
+  margin: 15px 0;
+  color: rgb(194, 192, 192);
+  letter-spacing: 1.2px;
+  line-height: 150%;
+}
+
+.user-info ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 15px 0;
+  color: rgb(194, 192, 192);
+}
+
+.user-info li {
+  margin-right: 10px;
+}
+
+.user-info strong {
+  margin-left: 10px;
+  color: white;
+}
+
+.repo {
+  display: inline-block;
+  padding: 7px 20px;
+  color: rgb(194, 192, 192);
+  background-color: rgb(12, 0, 175);
+  border-radius: 5px;
+  margin: 10px 10px 10px 0;
+}
